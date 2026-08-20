@@ -1,7 +1,0 @@
-{
-    "backend": {
-        "name": "github",
-        "repo": "gabrielrpalavecino-dotcom/Padlet",
-        "branch": "main"
-    }
-}
