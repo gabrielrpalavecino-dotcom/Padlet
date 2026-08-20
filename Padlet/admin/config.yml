@@ -1,0 +1,175 @@
+backend:
+  name: github
+  repo: gabrielrpalavecino-dotcom/Padlet
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+
+  # ---------------------------------------------------------
+  # GALERÍA ANIME
+  # ---------------------------------------------------------
+
+  - name: "personajes"
+    label: "Personajes Anime"
+    folder: "galería-anime/personajes"
+    create: true
+    extension: "md"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Rol", name: "rol", widget: "string" }
+      - { label: "Personalidad", name: "personalidad", widget: "markdown" }
+      - { label: "Paleta", name: "paleta", widget: "markdown" }
+      - { label: "Historia", name: "historia", widget: "markdown" }
+      - { label: "Imagen", name: "imagen", widget: "image" }
+
+  - name: "bocetos"
+    label: "Bocetos"
+    folder: "galería-anime/bocetos"
+    create: true
+    extension: "md"
+    fields:
+      - { label: "Etapa", name: "etapa", widget: "string" }
+      - { label: "Notas", name: "notas", widget: "markdown" }
+      - { label: "Imagen", name: "imagen", widget: "image" }
+
+  - name: "fanarts"
+    label: "Fanarts"
+    folder: "galería-anime/fanarts"
+    create: true
+    extension: "md"
+    fields:
+      - { label: "Serie original", name: "serie", widget: "string" }
+      - { label: "Técnica", name: "tecnica", widget: "string" }
+      - { label: "Notas", name: "notas", widget: "markdown" }
+      - { label: "Imagen", name: "imagen", widget: "image" }
+
+  - name: "colecciones"
+    label: "Colecciones Temáticas"
+    folder: "galería-anime/colecciones"
+    create: true
+    extension: "md"
+    fields:
+      - { label: "Tema", name: "tema", widget: "string" }
+      - { label: "Concepto", name: "concepto", widget: "markdown" }
+      - { label: "Imágenes", name: "imagenes", widget: "list", field: { label: "Imagen", name: "imagen", widget: "image" } }
+
+  # ---------------------------------------------------------
+  # CONTENIDO IG
+  # ---------------------------------------------------------
+
+  - name: "ideas_ig"
+    label: "Ideas para IG"
+    folder: "contenido-ig/ideas"
+    create: true
+    extension: "md"
+    fields:
+      - { label: "Concepto", name: "concepto", widget: "string" }
+      - { label: "Mini Guion", name: "guion", widget: "markdown" }
+      - { label: "Imagen", name: "imagen", widget: "image" }
+
+  - name: "posts_ig"
+    label: "Posts Terminados IG"
+    folder: "contenido-ig/posts-terminados"
+    create: true
+    extension: "md"
+    fields:
+      - { label: "Copy", name: "copy", widget: "markdown" }
+      - { label: "Hashtags", name: "hashtags", widget: "string" }
+      - { label: "Imagen", name: "imagen", widget: "image" }
+
+  - name: "stories_ig"
+    label: "Stories IG"
+    folder: "contenido-ig/stories"
+    create: true
+    extension: "md"
+    fields:
+      - { label: "Categoría", name: "categoria", widget: "string" }
+      - { label: "Texto", name: "texto", widget: "markdown" }
+      - { label: "Imagen", name: "imagen", widget: "image" }
+
+  # ---------------------------------------------------------
+  # TEXTOS / HISTORIAS
+  # ---------------------------------------------------------
+
+  - name: "historias_cortas"
+    label: "Historias Cortas"
+    folder: "textos-historias/historias-cortas"
+    create: true
+    extension: "md"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Texto", name: "texto", widget: "markdown" }
+
+  - name: "capitulos"
+    label: "Capítulos"
+    folder: "textos-historias/capitulos"
+    create: true
+    extension: "md"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Índice", name: "indice", widget: "markdown" }
+      - { label: "Texto", name: "texto", widget: "markdown" }
+
+  - name: "lore"
+    label: "Lore del Mundo"
+    folder: "textos-historias/lore"
+    create: true
+    extension: "md"
+    fields:
+      - { label: "Tema", name: "tema", widget: "string" }
+      - { label: "Descripción", name: "descripcion", widget: "markdown" }
+
+  - name: "fichas_personajes"
+    label: "Fichas de Personajes"
+    folder: "textos-historias/fichas-personajes"
+    create: true
+    extension: "md"
+    fields:
+      - { label: "Nombre", name: "nombre", widget: "string" }
+      - { label: "Historia personal", name: "historia", widget: "markdown" }
+      - { label: "Motivaciones", name: "motivaciones", widget: "markdown" }
+      - { label: "Relaciones", name: "relaciones", widget: "markdown" }
+      - { label: "Imagen", name: "imagen", widget: "image" }
+
+  # ---------------------------------------------------------
+  # COMENTARIOS / NOTAS
+  # ---------------------------------------------------------
+
+  - name: "notas_personajes"
+    label: "Notas sobre Personajes"
+    folder: "comentarios-notas/personajes"
+    create: true
+    extension: "md"
+    fields:
+      - { label: "Observación", name: "observacion", widget: "markdown" }
+      - { label: "Propuesta", name: "propuesta", widget: "markdown" }
+
+  - name: "notas_historia"
+    label: "Notas sobre Historia"
+    folder: "comentarios-notas/historia"
+    create: true
+    extension: "md"
+    fields:
+      - { label: "Observación", name: "observacion", widget: "markdown" }
+      - { label: "Propuesta", name: "propuesta", widget: "markdown" }
+
+  - name: "notas_dibujo"
+    label: "Notas de Dibujo"
+    folder: "comentarios-notas/dibujo"
+    create: true
+    extension: "md"
+    fields:
+      - { label: "Observación", name: "observacion", widget: "markdown" }
+      - { label: "Propuesta", name: "propuesta", widget: "markdown" }
+
+  - name: "notas_ig"
+    label: "Notas IG"
+    folder: "comentarios-notas/ig"
+    create: true
+    extension: "md"
+    fields:
+      - { label: "Observación", name: "observacion", widget: "markdown" }
+      - { label: "Propuesta", name: "propuesta", widget: "markdown" }
